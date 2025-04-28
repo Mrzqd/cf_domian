@@ -1,22 +1,12 @@
-```txt
-npm install
-npm run dev
+# cloudflare 域名管理
+基于 [Hono](https://github.com/honojs/hono) and [wrangler](https://github.com/cloudflare/wrangler)
+
+部署到 Cloudflare Workers
+
+```bash
+git clone https://github.com/Mrzqd/cf_domian.git
+cd cf_domian
+pnpm install
+pnpm run build
 ```
-
-```txt
-npm run deploy
-```
-
-[For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
-
-```txt
-npm run cf-typegen
-```
-
-Pass the `CloudflareBindings` as generics when instantiation `Hono`:
-
-```ts
-// src/index.ts
-const app = new Hono<{ Bindings: CloudflareBindings }>()
-```
-# cf_domian
+demo: https://domian.zzboy.tk/
